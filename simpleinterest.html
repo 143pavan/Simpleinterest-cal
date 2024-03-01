@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Simple Interest</title>
+	<link rel="stylesheet" href="simpleinterest.css">
+  </head>
+  <body>
+		<div>
+			<h2 align="center">Simple Interest Calc</h2>
+			<label>Principal Amount</label> <bR>
+			<input type="text" id="pamt" autofocus/> 
+			<span>&#8377;</span> 
+			<bR>
+			<label>Time</label> <bR>
+			<input type="text" id="time"/> <span>Year(s)</span>
+			<br>
+			<label>Rate of Interest</label> <bR>
+			<input type="text" id="roi"/> <span>%</span> 
+			<bR> <bR>
+			<button onclick="compute()">get interest</button>
+			<br> <br>
+			<output id="amount"></output>
+		</div>	
+		<script>
+			function compute()
+			{
+				let p,t,r,si;	//local vars
+				p=pamt.value;	//data coll from html
+				t=time.value;
+				r=roi.value;    //roi means Rate of Interest
+				si=p*t*r/100;
+				amount.value="Interest Amount	:"+si;
+			}
+		</script>
+  </body>
+</html>
